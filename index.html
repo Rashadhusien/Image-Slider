@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Image Slider with thubmnails" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Image Slider</title>
+  </head>
+  <body>
+    <h1>Image Slider With Thumbnails</h1>
+
+    <div class="slider-container">
+      <button class="prev-btn" aria-label="Previous">previous</button>
+
+      <div class="slider">
+        <img src="imgs/fullscreen.png" alt="fullscreen" class="full-screen" />
+        <div class="img-id"></div>
+        <img
+          src="imgs/01.jpg"
+          alt="Image 1"
+          class="active slide"
+          loading="lazy"
+        />
+        <img src="imgs/02.jpg" alt="Image 2" loading="lazy" class="slide" />
+        <img src="imgs/03.jpg" alt="Image 3" loading="lazy" class="slide" />
+        <img src="imgs/04.jpg" alt="Image 4" loading="lazy" class="slide" />
+        <img src="imgs/05.jpg" alt="Image 5" loading="lazy" class="slide" />
+        <img src="imgs/06.jpg" alt="Image 6" loading="lazy" class="slide" />
+        <img src="imgs/07.jpg" alt="Image 7" loading="lazy" class="slide" />
+        <img src="imgs/08.jpg" alt="Image 8" loading="lazy" class="slide" />
+      </div>
+
+      <button class="next-btn" aria-label="Next">Next</button>
+    </div>
+
+    <div class="gallery-container"></div>
+
+    <div class="screen">
+      <img src="imgs/close.png" alt="close" class="close" />
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
