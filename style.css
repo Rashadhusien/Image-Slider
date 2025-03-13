@@ -131,6 +131,7 @@ button:disabled {
 
 .screen img.slide {
   max-width: 90%;
+  max-height: 90%;
 }
 
 .screen img.close {

@@ -15,7 +15,6 @@ let currentSlide = 0;
 let touchStartX = 0;
 let touchEndX = 0;
 
-
 //  Auto-Play with Pause on Hover
 let autoSlide = setInterval(() => {
   goToSlide(currentSlide + 1);
@@ -104,8 +103,8 @@ document.addEventListener("keydown", (event) => {
 slides.forEach((img, i) => {
   fullScreenBtn.addEventListener("click", () => {
     if (currentSlide === i) {
-      console.log(img);
-      screen.appendChild(img);
+      const imgCopy = img.cloneNode();
+      screen.appendChild(imgCopy);
       screen.style.display = "flex";
     }
   });
@@ -113,7 +112,6 @@ slides.forEach((img, i) => {
 
 closeScreen.addEventListener("click", () => {
   screen.style.display = "none";
-  // screen.removeChild(screen.firstChild);
   screen.removeChild(screen.lastChild);
 });
 
