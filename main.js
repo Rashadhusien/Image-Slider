@@ -4,9 +4,7 @@ const nextBtn = document.querySelector(".next-btn");
 const imgId = document.querySelector(".img-id");
 const slider = document.querySelector(".slider");
 const fullScreenBtn = document.querySelector(".full-screen");
-
 const screen = document.querySelector(".screen");
-const closeScreen = document.querySelector(".close");
 
 const galleryContainer = document.querySelector(".gallery-container");
 galleryContainer.style.gridTemplateColumns = `repeat(${slides.length}, 1fr)`;
@@ -104,15 +102,18 @@ slides.forEach((img, i) => {
   fullScreenBtn.addEventListener("click", () => {
     if (currentSlide === i) {
       const imgCopy = img.cloneNode();
+      screen.innerHTML = "";
       screen.appendChild(imgCopy);
       screen.style.display = "flex";
+      document.body.style.overflow = "hidden";
     }
   });
 });
 
-closeScreen.addEventListener("click", () => {
+screen.addEventListener("click", () => {
   screen.style.display = "none";
-  screen.removeChild(screen.lastChild);
+  screen.innerHTML = "";
+  document.body.style.overflow = "auto";
 });
 
 document.querySelector(".slider").addEventListener("touchstart", (e) => {
