@@ -110,10 +110,12 @@ slides.forEach((img, i) => {
   });
 });
 
-screen.addEventListener("click", () => {
-  screen.style.display = "none";
-  screen.innerHTML = "";
-  document.body.style.overflow = "auto";
+screen.addEventListener("click", (e) => {
+  if (e.target === screen) {
+    screen.style.display = "none";
+    screen.innerHTML = "";
+    document.body.style.overflow = "auto";
+  }
 });
 
 document.querySelector(".slider").addEventListener("touchstart", (e) => {
